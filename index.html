@@ -10,6 +10,106 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .slidecontainer {
+              width: 100%;
+            }
+            
+            .slider {
+              -webkit-appearance: none;
+              width: 100%;
+              height: 25px;
+              background: #d3d3d3;
+              outline: none;
+              opacity: 0.7;
+              -webkit-transition: .2s;
+              transition: opacity .2s;
+            }
+            
+            .slider:hover {
+              opacity: 1;
+            }
+            
+            .slider::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 25px;
+              height: 25px;
+              background: #04AA6D;
+              cursor: pointer;
+            }
+            
+            .slider::-moz-range-thumb {
+              width: 25px;
+              height: 25px;
+              background: #04AA6D;
+              cursor: pointer;
+            }
+        </style>
+        <script>
+            function updateSlider(slideAmount) {
+                console.log(slideAmount)
+                let div1 = document.getElementById("lv1");
+                let div2 = document.getElementById("lv2");
+                let div3 = document.getElementById("lv3");
+                let div4 = document.getElementById("lv4");
+                if (slideAmount == '1'){
+                    div1.style.display = "block";
+                    div2.style.display = "none";
+                    div3.style.display = "none";
+                    div4.style.display = "none";
+                }
+                if (slideAmount == '2'){
+                    div1.style.display = "none";
+                    div2.style.display = "block";
+                    div3.style.display = "none";
+                    div4.style.display = "none";
+                }
+                if (slideAmount == '3'){
+                    div1.style.display = "none";
+                    div2.style.display = "none";
+                    div3.style.display = "block";
+                    div4.style.display = "none";
+                }
+                if (slideAmount == '4'){
+                    div1.style.display = "none";
+                    div2.style.display = "none";
+                    div3.style.display = "none";
+                    div4.style.display = "block";
+                }
+            }
+            function updateSlider2(slideAmount) {
+                console.log(slideAmount)
+                let div1 = document.getElementById("s1");
+                let div2 = document.getElementById("s2");
+                let div3 = document.getElementById("s3");
+                let div4 = document.getElementById("s4");
+                if (slideAmount == '1'){
+                    div1.style.display = "block";
+                    div2.style.display = "none";
+                    div3.style.display = "none";
+                    div4.style.display = "none";
+                }
+                if (slideAmount == '2'){
+                    div1.style.display = "none";
+                    div2.style.display = "block";
+                    div3.style.display = "none";
+                    div4.style.display = "none";
+                }
+                if (slideAmount == '3'){
+                    div1.style.display = "none";
+                    div2.style.display = "none";
+                    div3.style.display = "block";
+                    div4.style.display = "none";
+                }
+                if (slideAmount == '4'){
+                    div1.style.display = "none";
+                    div2.style.display = "none";
+                    div3.style.display = "none";
+                    div4.style.display = "block";
+                }
+            }
+        </script>
 	</head>
 	<body class="is-preload">		
 
@@ -34,6 +134,20 @@
 
                     <div class="row">
 						<h3>INTRODUCTION</h3>
+
+                        <p><b>ToolTip: </b>Slide to summarize introduction at different levels of granularity. This is an AI-assisted tool that summarizes text using BART, a transformer based language model trained for text summarization.</p>
+                        
+                        <div><input type="range" min="1" max="4" value="1" class="slider" id="myRange" onchange="updateSlider(this.value)"></div>
+
+                        <div id="lv1" style="border:1px dotted red; display: block;">Summary (Maxlength=100): Recent advances in CUI (Conversational User Interface) research and practice have created a trend towards using chatbots to improve the user experience (UX) with quantitative surveys . Qualitative</div>
+                        <div id="lv2" style="border:1px dotted red; display: none;">
+                            Summary (Maxlength=200): Recent advances in CUI (Conversational User Interface) research and practice have created a trend towards using chatbots to improve the user experience (UX) with quantitative surveys . We hypothesized that chatbot technology might be sufficiently advanced to enable a system that helps people finish at least some qualitative surveys without human intervention . Qualitative research methodology is diverse, with distinct approaches stemming from psychology, sociology, anthropology, ethnography and phenomenology .
+                        </div>
+                        <div id="lv3" style="border:1px dotted red; display: none;">Summary (Maxlength=300): Recent advances in CUI (Conversational User Interface) research and practice have created a trend towards using chatbots to improve the user experience (UX) with quantitative surveys . Qualitative surveys tend to rely heavily on human abilities of language understanding and improvising that are deemed outside of the reach of current chatbots . We hypothesized that current chatbot technology might be sufficiently advanced to enable a system that helps people finish at least some qualitative surveys without human intervention . The conclusion that could be drawn is that chatbot performance is currently insufficient to replace humans for less structured tasks, such as conducting qualitative surveys . Our research explores the feasibility of augmenting or even automating human tasks and skills like qualitative surveys with the assistance of CUIs, which can involve Artificial Intelligence in the form of Artificial Intelligence (AI) in the forms of AI . We think it is worthwhile to share our experiences into expanding their interest to GUIs and their interest into expanding interest to their GUIs, and we think it worthwhile to</div>
+                        <div id="lv4" style="border:1px dotted red; display: none;">
+                            Summary (Maxlength=400): Recent advances in CUI (Conversational User Interface) research and practice have created a trend towards using chatbots to improve the user experience (UX) with quantitative surveys . Qualitative surveys tend to rely heavily on human abilities of language understanding and improvising that are deemed outside of the reach of current chatbots . We hypothesized that current chatbot technology might be sufficiently advanced to enable a system that helps people finish at least some qualitative surveys without human intervention . The conclusion that could be drawn is that chatbot performance is currently insufficient to replace humans for less structured tasks, such as conducting qualitative surveys . Our research explores the feasibility of augmenting or even automating human tasks and skills like qualitative surveys with the assistance of CUIs, which can involve Artificial Intelligence in the form of Artificial Intelligence (AI) in the forms of AI . We think it is worthwhile to share our experiences into expanding their interest to GUIs and their interest into expanding interest to their GUIs, and we think we think it worthwhile to expand their interest from GUIs into GUIs . The resulting prototype is now considered sufficiently stable and usable to be deployed in a more extensive study of guis-based chatbots and other GUIs to be used by others in the context of their GUis-powered chatbots. We hope to use our prototype to test our ability to build a prototype and to test the prototype and test our prototype. The resulting results are available to test their ability to test a new GUis systems.
+                        </div>
+
                         <div>
                             User surveys are frequently used for end-user data collection in both business and research. They are used to understand user motivations and judgements. Recent advances in CUI (Conversational User Interface) research and practice have created a trend towards using chatbots to improve the user experience (UX) with quantitative surveys [5], which in turn leads to other survey benefits, such as higher response rates. Conversational interaction can help to convert mechanical work into a more socially acceptable interactivity, increasing user engagement and enjoyment [12]. CUIs also lead to new business opportunities, as demonstrated by recent changes in online services that conduct quantitative surveys (primarily questionnaires). We have also witnessed the emergence of tools that bring CUI development within reach of non-experts such as designers and HCI practitioners.
                         </div>
@@ -121,6 +235,17 @@
                             We used open-source software and free platforms to build the HUI for the RGT survey system. We explored various ways to develop this platform, and eventually settled on a Node-red platform [24] for web development. We attempted other tools including IBM Watson, Google dialogue flow and other NLP products, but found them to be too complex to use and/or insufficiently robust to experiment with. We use Node-red in combination with Red-Bot [28], as this latter extension allows to build a full-featured chatbot for Telegram.
                         </div>
                         <h4>3.5 Deliver</h4>
+                        
+                        <div><input type="range" min="1" max="4" value="1" class="slider" id="myRange2" onchange="updateSlider2(this.value)"></div>
+                        <div id="s1" style="border:1px dotted red; display: block;">Summary (Maxlength=100): Users tried out all stages in the interface, after which they provided feedback and suggestions for improvements . We still had an unstable system during the first round of our pilot study . The instability was mainly caused by flaws in the dialogue tree leading to instances where the conversation would “hang” (participants 1 and 4) In the second round of the pilot study, a screen recording was performed to capture the user interaction in more detail (with the users’ permission and approval by our</div>
+                        <div id="s2" style="border:1px dotted red; display: none;">
+                            Summary (Maxlength=200): Users tried out all stages in the interface, after which they provided feedback and suggestions for improvements . We still had an unstable system during the first round of our pilot study . The instability was mainly caused by flaws in the dialogue tree leading to instances where the conversation would “hang” (participants 1 and 4) In the second round of the pilot study, we improved the structure of the exit interview and encouraged participants to describe scenarios that could lead to improved CUI performance . The chatbot currently has no in-depth understanding of the user replies, which is why more content-specific feedback from the chatbot will require natural language understanding . Despite such limitations, all participants in our experiment were able to complete the RGT survey without human feedback or intervention. This reinforced our belief that the implementation of RGT in an online scenario is indeed feasible. We realized during the experiment that the conversational laddering included two distinct activities, laddering up and down. We also noticed that the
+                        </div>
+                        <div id="s3" style="border:1px dotted red; display: none;">Summary (Maxlength=300): Users tried out all stages in the interface, after which they provided feedback and suggestions for improvements . We still had an unstable system during the first round of our pilot study . The instability was mainly caused by flaws in the dialogue tree leading to instances where the conversation would “hang” (participants 1 and 4) In the second round of the pilot study, we improved the structure of the exit interview and encouraged participants to describe scenarios that could lead to improved CUI performance . The chatbot currently has no in-depth understanding of the user replies, which is why more content-specific feedback from the chatbot will require natural language understanding . Despite such limitations, all participants in our experiment were able to complete the RGT survey without human feedback or intervention. This reinforced our belief that the implementation of RGT in an online scenario is indeed feasible. We realized during the experiment that the conversational laddering included two distinct activities, laddering up and down. We also noticed that participants were trying to understand the objective and outcome of the survey in their communication with the chat bot in their interaction, and this is a rather straightforward process. In the laddering down, users are asked to report how important individual personal constructs are for their overall preference, this is an easy process. This is an excellent way to leverage the experience. We used an online Miro Board [20] The chat bot is currently . We also noted that there was a rather simple process. The chatrob is currently</div>
+                        <div id="s4" style="border:1px dotted red; display: none;">
+                            Summary (Maxlength=400): Users tried out all stages in the interface, after which they provided feedback and suggestions for improvements . We still had an unstable system during the first round of our pilot study . The instability was mainly caused by flaws in the dialogue tree leading to instances where the conversation would “hang” (participants 1 and 4) In the second round of the pilot study, we improved the structure of the exit interview and encouraged participants to describe scenarios that could lead to improved CUI performance . The chatbot currently has no in-depth understanding of the user replies, which is why more content-specific feedback from the chatbot will require natural language understanding . Despite such limitations, all participants in our experiment were able to complete the RGT survey without human feedback or intervention. This reinforced our belief that the implementation of RGT in an online scenario is indeed feasible. We realized during the experiment that the conversational laddering included two distinct activities, laddering up and down. We also noticed that participants were trying to understand the objective and outcome of the survey in their communication with the chat bot in their interaction, and this is a rather straightforward process. In the laddering down, users are asked to report how important individual personal constructs are for their overall preference, this is an easy process. This is an excellent way to leverage the experience. We used an online Miro Board [20] The chat bot is currently . We also noted that there was a rather simple process. The chatrob is currently. In our experiment, however, the chatrob was not to use the conversation. It is a more straightforward process, and it is a very straightforward. We found that the laddered down. It was a very simple. In this. Users are encouraged to inspect their own personal constructs. In . In the “laddering down’s ‘ladder down”, the ‘laddersing up’, the users were asked to describe their personal constructs and possible
+                        </div>
+
                         <div>
                             In the delivery stage, we generated a prototype for an automatic RGT survey with a HUI.We aimed to improve our original prototype through small pilot studies, trying to improve the UX and/or robustness of varying prototypes through user observation and feedback. Users tried out all stages in the interface, after which they provided feedback and suggestions for improvements. We conducted eight sessions with two different prototypes, each prototype being tested by four participants. We adopted a structured experimental setup as explained in Table 1. Users would not communicate with the researcher unless a bug interrupted the survey. We used an online Miro Board [20], which visualized the survey structure, to support users in the exit interview to provide feedback on all subtasks. In the second round of the pilot study, i.e., with the last four users, a screen recording was performed to capture the user interaction in more detail (with the users’ permission and approval by our ethical review board).
                         </div>
