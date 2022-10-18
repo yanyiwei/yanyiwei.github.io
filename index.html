@@ -133,9 +133,9 @@
 					</div>
 
                     <div class="row">
-						<h3>INTRODUCTION</h3>
+						<h3>1 INTRODUCTION</h3>
 
-                        <p><b>ToolTip: </b>Slide to summarize introduction at different levels of granularity. This is an AI-assisted tool that summarizes text using BART, a transformer based language model trained for text summarization.</p>
+                        <p><b>ToolTip: </b>Slide to summarize the introduction at different levels of granularity. This is an AI-assisted tool that summarizes text using BART, a transformer based language model trained for text summarization. (The original idea was to allow users highlight any text of interest, then summarize at any granularity of interest.)</p>
                         
                         <div><input type="range" min="1" max="4" value="1" class="slider" id="myRange" onchange="updateSlider(this.value)"></div>
 
@@ -173,7 +173,7 @@
                         </div>
 
                         <img src="images/paper-figure2.png" alt="" />
-                        <h3>BACKGROUND AND MOTIVATION</h3>
+                        <h3>2 BACKGROUND AND MOTIVATION</h3>
 
                         <div>
                             We argue that even though some technical issues (mostly in relationship to AI and NLP) restrict the application of CUIs in tasks such as qualitative surveys, it is still possible to conceive and build relevant systems by carefully balancing technical and user requirements. Some CUI researchers have concluded that even with recent advances in NLP and NLU, the UX of CUI's can still pose a substantial problem during application. For example, the research group of Nielsen and Norman has established that “both voice-only and screen-based intelligent assistants work well only for minimal, simple queries that have fairly simple, short answers”. They also claimed that many detailed issues could be fixed with more thoughtful design without the need for advancing natural language and dialogue processing [3]. Although some useful guidelines for designing a CUI could be derived from the challenges that they identified [6, 34], we also concluded that several important aspects remain unexplored. For example, what kind of information do chatbots need to assist users in their conversations, and how do we develop a more detailed understanding of which tasks or scenarios can be supported with current technology.
@@ -183,7 +183,7 @@
                             We propose that new CUI explorations should focus more on improving the UX and efficiency in concrete tasks than on insisting on additional technical innovations (such as new applications for customer service bots and single-round task bots [1, 4, 15], creating chatbot APIs for developers, or approaches for corpus collection and model training [21, 25] for NLP). We hypothesize that CUI development does not necessarily require improved CUI technology but may also come about by looking for applications where CUI technological limitations can be handled by carefully balancing the interface design, e.g., by only assigning some subtasks to CUIs.
                         </div>
 
-                        <h4>Conversational User Interfaces and Hybrid User Interfaces</h4>
+                        <h4>2.1 Conversational User Interfaces and Hybrid User Interfaces</h4>
                         <div>
                             CUI is a concept that is also referred to by other names such as conversational agents, or chatbots (proposed in 1994 by Michael Mauldin). Recent technology developments have enabled a surge in CUIs and Virtual Personal Assistants (VPAs), leading to concepts such as intelligent personal assistants and digital personal assistants becoming mainstream in the development of CUIs [18]. In 2016, technology giants started to promote related services or APIs [34], such as Alexa and Siri, that aimed at a more natural user experience. Because of technical limitations, the dialogues that such VPAs can handle are mostly at the level of a natural and intuitive interaction model [19]. For specific but more complex tasks, such as medical or stock analysis [13] or the qualitative surveys that we are interested in, the use of VPAs remains challenging; experiments with applying CUIs for such complex tasks are therefore interesting from a research perspective. One frequently-mentioned benefit of CUIs over GUIs is that they are expected to lead to a more human-like interaction [22]. CUIs can for instance filter the available information [3] and guide users stepwise through an interaction, sharing only limited information in each step. CUIs can use text, buttons, tables, memes, videos, and interactive cards to share such information. They are typically guided by selections that users make from a limited number of alternatives offered to them. The interaction hence unfolds over time, and expectations about how and when to take turns and assign initiative over time [15] are crucial to its success. GUIs, on the contrary, can provide a much richer (visual) context that can be assessed and interacted with, often in a non-prescribed order, which means that they can be complementary to CUIs in many respects. Therefore, instead of pushing CUIs as an alternative for GUIs, we focus on how both approaches can complement each other and be combined in ways such that the resulting HUI has advantages over both CUI and GUI.
                         </div>
@@ -235,7 +235,7 @@
                             We used open-source software and free platforms to build the HUI for the RGT survey system. We explored various ways to develop this platform, and eventually settled on a Node-red platform [24] for web development. We attempted other tools including IBM Watson, Google dialogue flow and other NLP products, but found them to be too complex to use and/or insufficiently robust to experiment with. We use Node-red in combination with Red-Bot [28], as this latter extension allows to build a full-featured chatbot for Telegram.
                         </div>
                         <h4>3.5 Deliver</h4>
-                        
+                        <p><b>ToolTip: </b>Slide to summarize section 3.5 at different levels of granularity. </p>
                         <div><input type="range" min="1" max="4" value="1" class="slider" id="myRange2" onchange="updateSlider2(this.value)"></div>
                         <div id="s1" style="border:1px dotted red; display: block;">Summary (Maxlength=100): Users tried out all stages in the interface, after which they provided feedback and suggestions for improvements . We still had an unstable system during the first round of our pilot study . The instability was mainly caused by flaws in the dialogue tree leading to instances where the conversation would “hang” (participants 1 and 4) In the second round of the pilot study, a screen recording was performed to capture the user interaction in more detail (with the users’ permission and approval by our</div>
                         <div id="s2" style="border:1px dotted red; display: none;">
