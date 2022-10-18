@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Yiwei Yang</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#home">Home</a></li>
+					<!-- <li><a href="#research">Research</a></li> -->
+					<li><a href="#publication">Publications</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="papers/yiwei_cv.pdf">CV</a></li>
+				</ul>
+			</nav>
+			
+
+
+		<!-- Home -->
+			<article id="home" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="images/yiwei_at_dude.jpg" alt="" style="border-radius: 16px;"/></span>
+						</div>
+						<div class="col-8 col-7-large col-12-medium">
+							<header>
+								<h1>Hi. I'm <strong>Yiwei Yang</strong>.</h1>
+							</header>
+							<p>I am a 2nd year PhD student at the <b>Information School of University of Washington</b>, advised by <b>Bill Howe</b>. I received my undergraduate degree in Computer Science in 2019 from the University of Michigan.</p>
+							<p>Broadly, my research interests lie at the intersection of <b>interpretability</b> and <b>fairness</b> for <b>machine learning</b>. Recently, I designed a metric and a regularizer for measuring and mitigating <b>procedural unfairness</b> by quantifying the <b>divergence of explanations</b> between different groups. This work is submitted to FAccT 2022 (<i>under review</i>). Currently, I am working on a novel <b>group-level feature visualization technique</b> that can expose the <b>biases of image models</b>. </p>							
+						</div>
+					</div>
+				</div>
+			</article>
+
+		<!-- Work -->
+			<!-- <article id="research" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>Research</h2>
+					</header>
+					<div class="row aln-center">
+						<div class="col-12 col-12-medium col-12-small">
+							<section class="box style1">
+								<h3>Qlarify: Generating User-Efficient Clarification Questions for Conversational Systems</h3>
+								<p>Background: Voice User Interfaces (VUIs) allow users to access information in hands-free and eye-free conditions (e.g. driving, cooking). People often make ambiguous references when making a request to VUIs, which causes agents to ask follow-up clarification questions. In situations when users divide attention across multiple tasks, answering each additional question adds an expense to user's cognitive effort. This leads to the problem of asking informative and easy-to-answer questions that require users less effort to clarify the ambiguity. </p>
+								<p>Approach: We introduce a hybrid human-machine approach to generate questions that balance the trade-off between information gain and answerability. Given a list of questions generated from attributes of the ambiguous reference (e.g. genre of a movie, which can be obtained through Web APIs) and a set of possible reference candidates (e.g. all movies on web), we leverage machine intelligence to rank questions by information gain (i.e. conditional entropy). Then, we leverage crowd intelligence to estimate the perceived effort to answer each question (i.e. how difficult is it to recall and describe), and vote on a question that best balances the trade-off.</p>
+							</section>
+						</div>
+						<div class="col-12 col-12-medium col-12-small">
+							<section class="box style1">
+								<h3>HEIDL: Learning Linguistic Expressions with Deep Learning and Human-in-the-Loop</h3>
+								<p>Background: Prior work in human-in-the-loop machine learning methods has focused on eliciting knowledge from people to create more powerful models. For example, active learning samples examples and solicits people for labels to reduce the overall labeling effort. However, merely asking for labels is a limited use of human knowledge. People are able to not only provide labels to single examples, but also identify rules that label examples in batch.  </p>
+								<p>Approach: We train a deep neural network to suggest first-order-logic rules. Each rule classifies a batch of examples to a label. HEIDL presents the learned rules to NLP engineers, and helps them examine, understand, and select a trusted set of rules that generalize to real world cases. By learning rules, we enable a novel interaction paradigm between people and the learned model, allowing people to directly modify the model logic (rules) rather than model predictions (sampled examples). </p>
+							</section>
+						</div>
+					</div>
+				</div>
+			</article> -->
+
+		<!-- Portfolio -->
+			<article id="publication" class="wrapper style1" >
+				<div class="container">
+					<header>
+						<h2>Publications</h2>
+					</header>
+					<div class="row">
+						<h3>Conference Full Papers</h3>
+						<ul>
+							<li>
+								<b>Y. Yang</b>, C. Shah , B. Howe. XAI meets Fairness: Co-Regularization of Procedural and Distributive Fairness in Neural Networks <i>In submission to FAccT 2022.</i>
+							</li>
+							<li>
+								A. Lundgard, <b>Y. Yang</b>, M. L. Foster, W.S. Lasecki. <a href="papers/Bolt_CHI2018.pdf"> Bolt: Instantaneous Crowdsourcing via Just-in-Time Training.</a> In Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2018). Monstral, Canada.
+							</li>
+							<li>
+								S. W. Lee, Y. Zhang, I. Wong, <b>Y. Yang</b>, S. D. O’Keefe, W. S. Lasecki. <a href="papers/SketchExpress_UIST2017.pdf">SketchExpress: Remixing Animations For More Effective Crowd-Powered Prototyping Of Interactive Interfaces.</a> In Proceedings of the ACM Symposium on User Interface Software and Technology (UIST 2017). Quebec City, Canada.
+							</li>
+							<li>
+								H. Kaur, M. Gordon, <b>Y. Yang</b>, J. Teervan, E. Kamar, J. Bigham, W. S. Lasecki. <a href="papers/CrowdMask_HCOMP2017.pdf">CrowdMask: Using Crowds to Preserve Privacy in Crowd-Powered Systems via Progressive Filtering.</a> In AAAI Conference on Human Computation Demos (HCOMP 2017), Quebec City, CAN.
+							</li>
+							<li>
+								Y. Chen, S. W. Lee, Y. Xie, <b>Y. Yang</b>, W. S. Lasecki, S. Oney. <a href="papers/codeon_chi2017.pdf">Codeon: On Demand Software Development Assistance.</a> In Proceedings of the International ACM Conference on Human Factors in Computing Systems (CHI 2017), Denver, USA.
+							</li>					
+						</ul>
+						<h3>Workshop/Demo/Posters</h3>
+						<ul>
+							<li>
+								<b>Y.Yang</b>, E. Kandogan, Y. Li, W.S.Lasecki, P. Sen. <a href="papers/heidl.pdf">HEIDL: Learning Linguistic Expressions with Deep Learning and Human-in-the-Loop.</a> In Proceedings of the Association for Computational Linguistics (ACL 2019). Florence, Italy. (<b>Best Poster</b> at Michigan AI Symposium, 1/55)
+							</li>
+							<li>
+								<b>Y.Yang</b>, E. Kandogan, Y. Li, W.S.Lasecki, P. Sen. <a href="papers/IUI19WS-ExSS2019-9.pdf">A Study on Interaction in Human-in-the-Loop Machine Learning for Text Analytics. Joint Proceedings of the ACM IUI 2019 Workshops co-located with the 24th ACM Conference on Intelligent User Interfaces (ACM IUI 2019),</a> Los Angeles, USA, March 20, 2019.
+							</li>
+							<li>
+								S. W. Lee, <b>Y. Yang</b>, S. Yan, Y. Zhang, I. Wong, Z. Yan, M. McGruder, C. M. Homan, W. S. Lasecki. <a href="papers/apparition_demo_hcomp2016.pdf">Creating Interactive Behaviors in Early Sketch by Recording and Remixing Crowd Demonstrations.</a> In AAAI Conference on Human Computation Demos (HCOMP 2016), Austin, TX. 
+							</li>	
+						</ul>
+
+					</div>
+				</div>
+			</article>
+
+		<!-- Contact -->
+			<article id="contact" class="wrapper style4">
+				<div class="container medium">
+					<header>
+						<h2>Contact</h2>
+					</header>
+					<div class="row">
+						<div class="col-12">
+							<p>
+								Email: yanyiwei@uw.edu 
+							</p>
+							
+						</div>
+					</div>
+					<footer>
+						<ul id="copyright">
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+				</div>
+			</article>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
