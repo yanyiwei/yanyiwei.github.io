@@ -100,7 +100,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Open Sans', sans-serif;
 		line-height: 1.85em;
-		color: #888;
+		color: #333;
 		font-weight: 300;
 		font-size: 13pt;
 	}
@@ -124,7 +124,7 @@ input, select, textarea {
 
 	b, strong {
 		font-weight: 600;
-		color: #3e3e3e;
+		color: #000;
 	}
 
 	i, em {
@@ -150,7 +150,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #3e3e3e;
+		color: #000;
 		margin: 0 0 0.75em 0;
 	}
 
@@ -1508,7 +1508,7 @@ input, select, textarea {
 /* Form */
 
 	form label {
-		color: #3e3e3e;
+		color: #000;
 		font-weight: 700;
 		display: block;
 		margin: 0 0 0.5em 0;
@@ -1531,7 +1531,7 @@ input, select, textarea {
 		border-radius: 8px;
 		border: solid 1px #ddd;
 		background: #fff;
-		color: #bbb;
+		color: #333;
 		box-shadow: inset 0px 2px 3px 1px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(255, 255, 255, 0.025);
 		width: 100%;
 	}
@@ -1554,19 +1554,19 @@ input, select, textarea {
 	}
 
 	form ::-webkit-input-placeholder {
-		color: #555 !important;
+		color: #666 !important;
 	}
 
 	form :-moz-placeholder {
-		color: #555 !important;
+		color: #666 !important;
 	}
 
 	form ::-moz-placeholder {
-		color: #555 !important;
+		color: #666 !important;
 	}
 
 	form :-ms-input-placeholder {
-		color: #555 !important;
+		color: #666 !important;
 	}
 
 	form ::-moz-focus-inner {
@@ -2141,7 +2141,7 @@ input, select, textarea {
 /* Copyright */
 
 	#copyright {
-		color: #666;
+		color: #333;
 		font-size: 1em;
 		line-height: 1em;
 		list-style: none;
@@ -2173,7 +2173,7 @@ input, select, textarea {
 		}
 
 			#copyright a:hover {
-				color: #777;
+				color: #555;
 			}
 
 /* Large */
