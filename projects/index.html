@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spatial Projects | BeanHam</title>
+  <title>Research Projects | Yiwei Yang</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -92,6 +92,8 @@
       border-radius: 6px;
       font-weight: 600;
       transition: background 0.2s ease;
+      display: inline-flex;
+      align-items: center;
     }
 
     a.button:hover {
@@ -106,6 +108,17 @@
       background: #5936a2;
     }
 
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      background: #d63384;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -117,12 +130,12 @@
 </head>
 <body>
   <header>
-    <h1>Urban Projects</h1>
+    <h1>Research Projects</h1>
     <p style="max-width: 900px; margin: 1.5rem auto 0; font-size: 1.05rem; line-height: 1.6; opacity: 0.95;">
-      All projects presented here explore various aspects of <strong>urban spatial intelligence</strong>, 
-      with a shared goal of enhancing the <strong>quality</strong>, <strong>integrity</strong>, and 
-      <strong>equity</strong> of urban data. Together, they aim to build more reliable, interpretable, 
-      and inclusive spatial information systems that support evidence-based urban analysis and decision-making.
+      My research focuses on building <strong>reliable</strong> and <strong>trustworthy</strong> machine learning models,
+      particularly in addressing <strong>spurious correlations</strong> in vision-language models and improving
+      <strong>model robustness</strong>. These projects explore how to make AI systems more generalizable and robust
+      to distribution shifts.
     </p>
   </header>
 
@@ -130,20 +143,26 @@
     <!-- Project 1 -->
     <div class="card">
       <div class="card-content">
-        <h2>Spatial Integration</h2>
+        <h2>Escaping the SpuriVerse: Can Large Vision-Language Models Generalize Beyond Seen Spurious Correlations?</h2>
         <p>
-          We explore the application of large language models (LLMs) to empower domain experts in integrating large, heterogeneous, and noisy urban spatial datasets. 
-          Traditional rule-based integration methods are unable to cover all edge cases, requiring manual verification and repair. 
-          Machine learning approaches require collecting and labeling of large numbers of task-specific samples. 
-          In this study, we investigate the potential of LLMs for spatial data integration. 
-          We show that while LLMs exhibit spatial reasoning capabilities, they struggle to connect the macro-scale environment with the relevant computational geometry tasks,
-          often producing logically incoherent responses. But when provided relevant features, thereby reducing dependence on spatial reasoning, 
-          LLMs are able to generate high-performing results.           
+          Large vision-language models (LVLMs) like GPT-4V, Gemini 1.5, Claude, and Qwen 2.5-VL demonstrate impressive performance
+          across various tasks, but can they truly generalize beyond spurious correlations learned during training? This research
+          systematically investigates whether state-of-the-art vision-language models can overcome spurious associations when confronted
+          with scenarios where previously learned patterns break down or are inverted.
         </p>
-        <img src="images/spatial-integration.png" alt="Spatial Integration Cover Image">
+        <p>
+          We create a comprehensive evaluation framework to assess model robustness when spurious correlations are disrupted. Our findings
+          reveal critical limitations: even advanced models struggle to learn robust features independent of spurious correlations,
+          highlighting fundamental challenges in developing truly reliable AI systems that can generalize to distribution shifts.
+        </p>
+        <p>
+          <strong>Key Contributions:</strong> (1) Documented how vision-language models develop and rely on spurious correlations,
+          (2) Created systematic benchmarks for evaluating robustness to spurious pattern disruptions, (3) Evaluated multiple
+          state-of-the-art LVLMs to determine their vulnerability to distribution shifts involving spurious correlations.
+        </p>
         <div class="button-group">
-          <a href="https://arxiv.org/pdf/2508.05009" class="button secondary" target="_blank">Read Paper</a>
-          <a href="https://github.com/BeanHam/2024-spatial-data-integration" class="button" target="_blank">GitHub Link</a>          
+          <a href="https://arxiv.org/pdf/2506.18322" class="button secondary" target="_blank">Read Paper</a>
+          <span class="badge">NeurIPS 2025</span>
         </div>
       </div>
     </div>
@@ -151,19 +170,26 @@
     <!-- Project 2 -->
     <div class="card">
       <div class="card-content">
-        <h2>Spatial Annotation</h2>
+        <h2>Label-Efficient Group Robustness via Out-of-Distribution Concept Curation</h2>
         <p>
-          Equitable urban transportation applications require high-fidelity digital representations of the built environment (streets, crossings, curb ramps and more). 
-          Direct inspections and manual annotations are costly at scale, while conventional machine learning methods require substantial annotated training data for adequate performance. 
-          This study explores vision language models as a tool for annotating diverse urban features from satellite images, reducing the dependence on human annotation. 
-          We demonstrate a proof-ofconcept using a vision language model and a visual prompting strategy that considers segmented image elements. 
-          Experiments on two urban features — stop lines and raised tables — show that while zero-shot prompting rarely works, the segmentation and visual prompting strategies achieve 
-          nearly 40% intersection-over-union accuracy.
+          Building machine learning models that maintain consistent performance across different demographic groups typically requires
+          extensive labeled datasets—a costly and time-consuming process. This research introduces a novel approach that achieves
+          group robustness while dramatically reducing annotation requirements through strategic use of out-of-distribution concepts.
         </p>
-        <img src="images/spatial-annotation.png" alt="Spatial Annotation Cover Image">
-        <div class="button-group">        
-          <a href="https://volitionalai.uw.edu/paper/vl_annotation_24.pdf" class="button secondary" target="_blank">Read Paper</a>
-          <a href="https://github.com/BeanHam/2024-vl-annotation" class="button" target="_blank">GitHub Link</a>
+        <p>
+          Rather than relying on exhaustive labeling, we demonstrate how carefully curated concepts that fall outside the training
+          distribution can improve model fairness across demographic groups. By incorporating these strategically selected concepts
+          during training, models learn more robust feature representations that generalize better across diverse populations.
+        </p>
+        <p>
+          <strong>Key Contributions:</strong> (1) A novel methodology for achieving group robustness through out-of-distribution
+          concept curation, (2) Demonstrated label efficiency that significantly reduces annotation requirements while maintaining
+          or exceeding fully supervised performance, (3) A practical framework for practitioners developing equitable AI systems
+          with constrained labeling budgets.
+        </p>
+        <div class="button-group">
+          <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Label-Efficient_Group_Robustness_via_Out-of-Distribution_Concept_Curation_CVPR_2024_paper.pdf" class="button secondary" target="_blank">Read Paper</a>
+          <span class="badge">CVPR 2024</span>
         </div>
       </div>
     </div>
@@ -171,7 +197,7 @@
   </main>
 
   <footer>
-    © 2025 BeanHam — <a href="https://github.com/BeanHam" target="_blank">GitHub Profile</a>
+    © 2025 Yiwei Yang — <a href="https://yanyiwei.github.io" target="_blank">Home</a>
   </footer>
 </body>
 </html>
