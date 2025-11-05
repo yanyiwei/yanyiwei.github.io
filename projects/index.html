@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spatial Projects | BeanHam</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #24292e;
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    header p.intro {
+      max-width: 700px;
+      margin: 1.5rem auto 0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 0;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-content {
+      padding: 1.5rem 2rem;
+    }
+
+    .card h2 {
+      margin-top: 0.5rem;
+      color: #24292e;
+    }
+
+    .button-group {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    a.button {
+      text-decoration: none;
+      color: white;
+      background: #0366d6;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    a.button:hover {
+      background: #0253ad;
+    }
+
+    a.button.secondary {
+      background: #6f42c1;
+    }
+
+    a.button.secondary:hover {
+      background: #5936a2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Urban Projects</h1>
+    <p style="max-width: 900px; margin: 1.5rem auto 0; font-size: 1.05rem; line-height: 1.6; opacity: 0.95;">
+      All projects presented here explore various aspects of <strong>urban spatial intelligence</strong>, 
+      with a shared goal of enhancing the <strong>quality</strong>, <strong>integrity</strong>, and 
+      <strong>equity</strong> of urban data. Together, they aim to build more reliable, interpretable, 
+      and inclusive spatial information systems that support evidence-based urban analysis and decision-making.
+    </p>
+  </header>
+
+  <main>
+    <!-- Project 1 -->
+    <div class="card">
+      <div class="card-content">
+        <h2>Spatial Integration</h2>
+        <p>
+          We explore the application of large language models (LLMs) to empower domain experts in integrating large, heterogeneous, and noisy urban spatial datasets. 
+          Traditional rule-based integration methods are unable to cover all edge cases, requiring manual verification and repair. 
+          Machine learning approaches require collecting and labeling of large numbers of task-specific samples. 
+          In this study, we investigate the potential of LLMs for spatial data integration. 
+          We show that while LLMs exhibit spatial reasoning capabilities, they struggle to connect the macro-scale environment with the relevant computational geometry tasks,
+          often producing logically incoherent responses. But when provided relevant features, thereby reducing dependence on spatial reasoning, 
+          LLMs are able to generate high-performing results.           
+        </p>
+        <img src="images/spatial-integration.png" alt="Spatial Integration Cover Image">
+        <div class="button-group">
+          <a href="https://arxiv.org/pdf/2508.05009" class="button secondary" target="_blank">Read Paper</a>
+          <a href="https://github.com/BeanHam/2024-spatial-data-integration" class="button" target="_blank">GitHub Link</a>          
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="card">
+      <div class="card-content">
+        <h2>Spatial Annotation</h2>
+        <p>
+          Equitable urban transportation applications require high-fidelity digital representations of the built environment (streets, crossings, curb ramps and more). 
+          Direct inspections and manual annotations are costly at scale, while conventional machine learning methods require substantial annotated training data for adequate performance. 
+          This study explores vision language models as a tool for annotating diverse urban features from satellite images, reducing the dependence on human annotation. 
+          We demonstrate a proof-ofconcept using a vision language model and a visual prompting strategy that considers segmented image elements. 
+          Experiments on two urban features — stop lines and raised tables — show that while zero-shot prompting rarely works, the segmentation and visual prompting strategies achieve 
+          nearly 40% intersection-over-union accuracy.
+        </p>
+        <img src="images/spatial-annotation.png" alt="Spatial Annotation Cover Image">
+        <div class="button-group">        
+          <a href="https://volitionalai.uw.edu/paper/vl_annotation_24.pdf" class="button secondary" target="_blank">Read Paper</a>
+          <a href="https://github.com/BeanHam/2024-vl-annotation" class="button" target="_blank">GitHub Link</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2025 BeanHam — <a href="https://github.com/BeanHam" target="_blank">GitHub Profile</a>
+  </footer>
+</body>
+</html>
