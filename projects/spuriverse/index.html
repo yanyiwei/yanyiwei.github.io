@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SpuriVerse | Yiwei Yang</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #24292e;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    header .venue-badge {
+      display: inline-block;
+      background: #d63384;
+      color: white;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.8rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.3;
+    }
+
+    .authors {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin: 0.6rem 0 0;
+    }
+
+    .authors .me {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .button-row {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    a.button {
+      text-decoration: none;
+      color: white;
+      background: #0366d6;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    a.button:hover { background: #0253ad; }
+    a.button.arxiv { background: #b31b1b; }
+    a.button.arxiv:hover { background: #8c1515; }
+
+    main {
+      max-width: 860px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      background: white;
+      border-radius: 10px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    section h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #24292e;
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tldr {
+      background: #f0f4ff;
+      border-left: 4px solid #4a6fa5;
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 1.05rem;
+    }
+
+    ul.contributions {
+      margin: 0;
+      padding-left: 1.3rem;
+    }
+
+    ul.contributions li {
+      margin-bottom: 0.5rem;
+    }
+
+    .figure-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .figure-grid img {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #e1e4e8;
+    }
+
+    pre.bibtex {
+      background: #f6f8fa;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1rem 1.2rem;
+      font-size: 0.85rem;
+      overflow-x: auto;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .stat {
+      text-align: center;
+      flex: 1;
+      min-width: 120px;
+      background: #f6f8fa;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .stat .number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0366d6;
+      display: block;
+    }
+
+    .stat .label {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer a { color: #0366d6; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="venue-badge">NeurIPS 2025 &nbsp;·&nbsp; ICML 2025 R2-FM</div>
+  <h1>Escaping the SpuriVerse: Can Large Vision-Language Models Generalize Beyond Seen Spurious Correlations?</h1>
+  <p class="authors">
+    <span class="me">Yiwei Yang*</span>,
+    Chung Peng Lee*,
+    Shangbin Feng,
+    Dora Zhao,
+    Bingbing Wen,
+    Anthony Z. Liu,
+    Yulia Tsvetkov,
+    Bill Howe
+  </p>
+  <p style="opacity:0.75; font-size:0.9rem; margin:0.3rem 0 0;">University of Washington</p>
+  <div class="button-row">
+    <a href="https://arxiv.org/abs/2506.18322" class="button arxiv" target="_blank">arXiv</a>
+    <a href="https://arxiv.org/pdf/2506.18322" class="button" target="_blank">PDF</a>
+    <a href="../../index.html#publications" class="button" style="background:#555;">← Back</a>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>TL;DR</h2>
+    <div class="tldr">
+      We build <strong>SpuriVerse</strong>, a benchmark of 124 real-world spurious correlation types, and find that state-of-the-art vision-language models achieve only <strong>37.1%</strong> accuracy&mdash;far below chance in some settings&mdash;revealing a fundamental gap in their ability to escape seen shortcuts.
+    </div>
+  </section>
+
+  <section>
+    <h2>Abstract</h2>
+    <p>
+      Large vision-language models (LVLMs) like GPT-4V, Gemini 1.5, Claude, and Qwen 2.5-VL demonstrate impressive performance across various tasks, but can they truly generalize beyond spurious correlations learned during training?
+    </p>
+    <p>
+      We introduce <strong>SpuriVerse</strong>, a novel benchmark comprised of 124 distinct types of spurious correlations extracted from real-world datasets, each containing 1 realistic and 10 synthetic VQA samples&mdash;1,364 multiple-choice questions in total&mdash;sourced from GPT-4o errors on visual question-answering tasks. When tested on 15 open and closed-source models, top performers achieved only <strong>37.1%</strong> accuracy. However, fine-tuning on synthetic examples improved results to <strong>78.40%</strong>, indicating that models <em>can</em> learn to avoid shortcuts and attend to broader image context when given the right training signal.
+    </p>
+  </section>
+
+  <section>
+    <h2>Benchmark at a Glance</h2>
+    <div class="stat-row">
+      <div class="stat">
+        <span class="number">124</span>
+        <span class="label">Spurious correlation types</span>
+      </div>
+      <div class="stat">
+        <span class="number">1,364</span>
+        <span class="label">VQA questions</span>
+      </div>
+      <div class="stat">
+        <span class="number">15</span>
+        <span class="label">Models evaluated</span>
+      </div>
+      <div class="stat">
+        <span class="number">37.1%</span>
+        <span class="label">Best model accuracy</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key Contributions</h2>
+    <ul class="contributions">
+      <li><strong>SpuriVerse benchmark:</strong> 124 spurious correlation types extracted from real-world datasets, each with realistic and synthetic VQA samples covering a broad range of visual shortcuts.</li>
+      <li><strong>Systematic evaluation of 15 LVLMs:</strong> Comprehensive assessment of open and closed-source models, revealing that even state-of-the-art systems fall far short on spurious pattern generalization.</li>
+      <li><strong>Fine-tuning intervention:</strong> Demonstrated that synthetic fine-tuning on diverse spurious patterns improves generalization from 37.1% to 78.40%, pointing toward a tractable solution.</li>
+      <li><strong>Failure mode analysis:</strong> Identified when and how models rely on dataset artifacts rather than genuine visual reasoning, providing actionable insights for building more robust VLMs.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Citation</h2>
+    <pre class="bibtex">@article{yang2025spuriverse,
+  title   = {Escaping the SpuriVerse: Can Large Vision-Language Models
+             Generalize Beyond Seen Spurious Correlations?},
+  author  = {Yang, Yiwei and Lee, Chung Peng and Feng, Shangbin and
+             Zhao, Dora and Wen, Bingbing and Liu, Anthony Z. and
+             Tsvetkov, Yulia and Howe, Bill},
+  journal = {arXiv preprint arXiv:2506.18322},
+  year    = {2025}
+}</pre>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 Yiwei Yang &mdash; <a href="../../index.html">Home</a> &nbsp;|&nbsp; <a href="../index.html">All Projects</a>
+</footer>
+
+</body>
+</html>

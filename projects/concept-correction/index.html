@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concept Correction | Yiwei Yang</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #24292e;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    header .venue-badge {
+      display: inline-block;
+      background: #d63384;
+      color: white;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.8rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.3;
+    }
+
+    .authors {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin: 0.6rem 0 0;
+    }
+
+    .authors .me {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .button-row {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    a.button {
+      text-decoration: none;
+      color: white;
+      background: #0366d6;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    a.button:hover { background: #0253ad; }
+    a.button.cvpr { background: #1565c0; }
+    a.button.cvpr:hover { background: #0d47a1; }
+
+    main {
+      max-width: 860px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      background: white;
+      border-radius: 10px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    section h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #24292e;
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tldr {
+      background: #f0f4ff;
+      border-left: 4px solid #4a6fa5;
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 1.05rem;
+    }
+
+    ul.contributions {
+      margin: 0;
+      padding-left: 1.3rem;
+    }
+
+    ul.contributions li {
+      margin-bottom: 0.5rem;
+    }
+
+    pre.bibtex {
+      background: #f6f8fa;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1rem 1.2rem;
+      font-size: 0.85rem;
+      overflow-x: auto;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .stat {
+      text-align: center;
+      flex: 1;
+      min-width: 130px;
+      background: #f6f8fa;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .stat .number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0366d6;
+      display: block;
+    }
+
+    .stat .label {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .method-box {
+      background: #f9f0ff;
+      border-left: 4px solid #6f42c1;
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin-top: 0.5rem;
+    }
+
+    .method-box strong { color: #6f42c1; }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer a { color: #0366d6; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="venue-badge">CVPR 2024 &nbsp;·&nbsp; pp. 12426–12434</div>
+  <h1>Label-Efficient Group Robustness via Out-of-Distribution Concept Curation</h1>
+  <p class="authors">
+    <span class="me">Yiwei Yang</span>,
+    Anthony Z. Liu,
+    Robert Wolfe,
+    Aylin Caliskan,
+    Bill Howe
+  </p>
+  <p style="opacity:0.75; font-size:0.9rem; margin:0.3rem 0 0;">University of Washington</p>
+  <div class="button-row">
+    <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Label-Efficient_Group_Robustness_via_Out-of-Distribution_Concept_Curation_CVPR_2024_paper.html" class="button cvpr" target="_blank">CVPR Page</a>
+    <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Label-Efficient_Group_Robustness_via_Out-of-Distribution_Concept_Curation_CVPR_2024_paper.pdf" class="button" target="_blank">PDF</a>
+    <a href="../../index.html#publications" class="button" style="background:#555;">← Back</a>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>TL;DR</h2>
+    <div class="tldr">
+      We introduce <strong>Concept DRO</strong>, a framework that curates out-of-distribution concept images&mdash;including AI-generated ones&mdash;to estimate group labels and train distributionally robust models, achieving up to <strong>33.1%</strong> improvement over baselines <em>without</em> requiring any explicit spurious attribute annotations.
+    </div>
+  </section>
+
+  <section>
+    <h2>Abstract</h2>
+    <p>
+      Deep neural networks capture spurious correlations between attributes and class labels, causing poor performance on certain subgroups&mdash;a problem that is especially harmful when those attributes represent protected classes. Prior solutions either require expensive per-example attribute labels or impose restrictive assumptions about which correlations are present.
+    </p>
+    <p>
+      We propose a framework that uses <strong>curated image concept sets</strong> to measure and control unwanted correlations without requiring pre-existing attribute labels. Our method, <strong>Concept DRO</strong>, uses these concept sets to estimate group labels and then applies a distributionally robust optimization (DRO) objective to train group-robust classifiers. We demonstrate that manually curated concept sets&mdash;including AI-generated images&mdash;effectively mitigate bias, and that even small concept sets are sufficient to improve worst-group accuracy by up to <strong>33.1%</strong> over baseline methods on image classification benchmarks.
+    </p>
+  </section>
+
+  <section>
+    <h2>Method: Concept DRO</h2>
+    <div class="method-box">
+      <strong>Step 1 — Concept Curation:</strong> Collect or generate a small set of images that capture the spurious attribute of interest (e.g., images depicting only the background cue, without the target class).<br /><br />
+      <strong>Step 2 — Group Label Estimation:</strong> Use the concept set to compute similarity scores between training examples and the spurious concept, producing soft group membership estimates.<br /><br />
+      <strong>Step 3 — Robust Training:</strong> Apply a DRO objective (e.g., JTT or GroupDRO) using the estimated group labels to upweight underrepresented subgroups during training.
+    </div>
+  </section>
+
+  <section>
+    <h2>Results at a Glance</h2>
+    <div class="stat-row">
+      <div class="stat">
+        <span class="number">+33.1%</span>
+        <span class="label">Worst-group accuracy gain over baseline</span>
+      </div>
+      <div class="stat">
+        <span class="number">0</span>
+        <span class="label">Spurious attribute labels required</span>
+      </div>
+      <div class="stat">
+        <span class="number">Small</span>
+        <span class="label">Concept sets remain effective</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key Contributions</h2>
+    <ul class="contributions">
+      <li><strong>Label-free group robustness:</strong> A novel framework for controlling spurious correlations without requiring any pre-existing per-example attribute annotations.</li>
+      <li><strong>Concept DRO:</strong> A practical method that estimates group labels from curated concept sets and trains with a DRO objective, compatible with off-the-shelf robust training methods.</li>
+      <li><strong>AI-generated concepts work:</strong> Demonstrated that AI-generated images can serve as effective concept sets, enabling robustness improvement even when real reference images are unavailable.</li>
+      <li><strong>Label efficiency:</strong> Showed that small concept sets remain effective, significantly lowering the annotation and data collection cost for practitioners building equitable AI systems.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Citation</h2>
+    <pre class="bibtex">@InProceedings{Yang_2024_CVPR,
+  author    = {Yang, Yiwei and Liu, Anthony Z. and Wolfe, Robert and
+               Caliskan, Aylin and Howe, Bill},
+  title     = {Label-Efficient Group Robustness via Out-of-Distribution
+               Concept Curation},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer
+               Vision and Pattern Recognition (CVPR)},
+  month     = {June},
+  year      = {2024},
+  pages     = {12426--12434}
+}</pre>
+  </section>
+
+</main>
+
+<footer>
+  © 2024 Yiwei Yang &mdash; <a href="../../index.html">Home</a> &nbsp;|&nbsp; <a href="../index.html">All Projects</a>
+</footer>
+
+</body>
+</html>
