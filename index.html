@@ -4,13 +4,15 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Yiwei Yang | PhD Student, UW | LLM Agents, RL, and Multimodal Robustness</title>
+		<title>Yiwei Yang | PhD, University of Washington | LLM Agents, Tool Use, and Post-training</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Yiwei Yang is a PhD student at the University of Washington working on LLM agents, reinforcement learning, multimodal robustness, and trustworthy AI." />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Yiwei Yang earned a PhD from the University of Washington and is seeking full-time Research Scientist or Machine Learning Engineer positions. Yiwei's research focuses on LLM agents, tool use, post-training, and agent evaluation." />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/research.css" />
+		<link rel="stylesheet" href="assets/css/home.css" />
 	</head>
 	<body class="is-preload">
 
@@ -20,44 +22,33 @@
 					<li><a href="#home">Home</a></li>
 					<li><a href="#projects">Projects</a></li>
 					<li><a href="#publications">Publications</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="papers/yiwei_resume.pdf">CV</a></li>
 				</ul>
 			</nav>
 
 		<!-- Home -->
 			<article id="home" class="wrapper style1">
-				<div class="container">
-					<div class="row aln-middle">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit">
-								<img src="images/yiwei_at_poconos.png" alt="Yiwei Yang" style="border-radius: 18px;" />
-							</span>
+				<div class="container home-layout">
+					<header class="home-intro">
+						<h1>Hi, I'm <strong>Yiwei Yang</strong>.</h1>
+						<p class="home-credentials">PhD, University of Washington</p>
+						<p class="home-focus">LLM Agents &bull; Tool Use &bull; Post-training</p>
+						<div class="home-availability">
+							<p><strong>Currently seeking full-time Research Scientist or Machine Learning Engineer positions.</strong></p>
+							<p>I am especially interested in roles focused on LLM agents for coding and tool use, as well as post-training and agent evaluation.</p>
 						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>Hi, I'm <strong>Yiwei Yang</strong>.</h1>
-								<p style="font-size: 1.2em; margin-top: 0.3em;">
-									PhD Student, University of Washington<br />
-									LLM Agents &bull; Reinforcement Learning &bull; Trustworthy AI
-								</p>
-							</header>
-
-							<p>
-								I am a PhD student at the <b>University of Washington</b>, advised by <b>Bill Howe</b>.
-								I received my B.S. in Computer Science from the <b>University of Michigan</b>.
-							</p>
-
-							<p>
-								My research focuses on the reliability of <b>LLM agents</b> and <b>multimodal models</b>. I study how models trained with <b>reinforcement learning</b> can develop shortcut behaviors&mdash;such as <b>spurious tool-use</b>, <b>spurious correlations</b>, and <b>reward hacking</b>&mdash;that lead to brittle performance under distribution shift. To address this, I design <b>benchmarks</b>, <b>evaluation methods</b>, and <b>training interventions</b> that encourage more robust reasoning and decision-making.
-							</p>
-
-<div style="background: #f4f7ff; border-left: 4px solid #4a6fa5; padding: 1em 1.2em; margin: 1.2em 0; border-radius: 6px;">
-								<b>Currently seeking Summer 2026 Research / Machine Learning Internship opportunities.</b><br />
-								I am especially interested in roles related to LLM agents, RL for reasoning, multimodal learning, evaluation, and trustworthy AI.
-							</div>
-
-						</div>
+						<nav class="home-links" aria-label="Contact and profiles">
+							<a href="mailto:yanyiwei@uw.edu">Email</a>
+							<a href="https://scholar.google.com/citations?hl=en&amp;user=-ZAORukAAAAJ">Google Scholar</a>
+							<a href="https://www.linkedin.com/in/yiwei-yang-1b8bb8125">LinkedIn</a>
+						</nav>
+					</header>
+					<div class="home-portrait">
+						<img src="images/yiwei_at_poconos.png" alt="Yiwei Yang" />
+					</div>
+					<div class="home-bio">
+						<p>I earned my PhD in Information Science from the <b>University of Washington</b> in August 2026, advised by <b>Bill Howe</b>, and my B.S. in Computer Science and Engineering from the <b>University of Michigan</b>.</p>
+						<p>My research focuses on <b>LLM agents</b>, particularly <b>coding, tool use, reasoning, and post-training</b>. I build benchmarks and training methods to help agents use tools for the right reasons and generalize beyond spurious correlations. My work spans coding-agent evaluation, reinforcement learning and reward design, and robustness in vision-language models.</p>
+						<p>I have also interned at <b>LinkedIn Core AI</b>, <b>Adobe</b>, and <b>Sony AI</b>. At LinkedIn, I developed cost-aware model routing and an automatic tool compiler to improve the accuracy and efficiency of recommendation agents.</p>
 					</div>
 				</div>
 			</article>
@@ -67,48 +58,47 @@
 				<div class="container">
 					<header>
 						<h2>Research Highlights</h2>
-						<p>Representative projects that capture my current research direction.</p>
+						<p>Building more reliable agents and multimodal models.</p>
 					</header>
-					<div class="row">
-						<div class="col-6 col-12-medium">
-							<section class="box style1" style="height: 100%;">
-								<h3>Reliable Tool Use in LLM Agents</h3>
-								<p>
-									LLM agents often rely on tools such as search engines or code interpreters to solve complex tasks.
-									However, reinforcement learning can cause agents to learn <b>shortcut associations</b> between prompt patterns
-									and specific tools, leading to brittle behavior under distribution shift.
-								</p>
-								<p>
-									I study this phenomenon through <b>controlled counterfactual evaluations</b> that isolate cue-driven failures
-									in tool selection. I also analyze <b>training dynamics</b>, such as entropy collapse in tool-choice behavior,
-									and develop <b>training interventions</b> including rationale rewards and tool optimality constraints.
-								</p>
-								<ul style="text-align: left; margin-bottom: 0;">
-									<li>Problem: shortcut-driven tool decisions in RL-trained agents</li>
-									<li>Approach: counterfactual evaluation, synthetic cues, and training-time analysis</li>
-									<li>Goal: agents that generalize tool use beyond seen prompt patterns</li>
-								</ul>
-							</section>
-						</div>
-						<div class="col-6 col-12-medium">
-							<section class="box style1" style="height: 100%;">
-								<h3>SpuriVerse: Benchmarking Robustness in Vision-Language Models</h3>
-								<p>
-									Vision-language models often achieve strong benchmark performance by exploiting
-									<b>spurious correlations</b> rather than learning intended semantics.
-								</p>
-								<p>
-									I developed <b>SpuriVerse</b>, a benchmark that systematically evaluates whether multimodal models
-									can generalize beyond these shortcuts. The benchmark introduces <b>controlled shifts in visual cues
-									and group structure</b>, revealing when models rely on dataset artifacts rather than genuine reasoning.
-								</p>
-								<ul style="text-align: left; margin-bottom: 0;">
-									<li>Problem: strong benchmark accuracy can hide shortcut reliance</li>
-									<li>Approach: controlled benchmark construction with spurious correlation shifts</li>
-									<li>Goal: evaluate whether VLMs generalize beyond seen correlations</li>
-								</ul>
-							</section>
-						</div>
+					<div class="research-grid">
+						<section class="research-card" aria-labelledby="tool-use-title">
+							<p class="research-venue">arXiv 2026</p>
+							<h3 id="tool-use-title">Reliable Tool Use in LLM Agents</h3>
+							<p class="research-summary">I study why RL-trained agents make unnecessary tool calls and design rewards that improve tool-use decisions.</p>
+							<div class="research-result">
+								<p class="research-metric">40.1% <span aria-label="to">&rarr;</span> 0.2%</p>
+								<p class="research-result-label">Unnecessary search calls</p>
+								<p class="research-context">With Tool Necessity Reward on GSM8K with spurious cues, while preserving accuracy.</p>
+							</div>
+							<ul class="research-tags" aria-label="Research methods">
+								<li>Reinforcement learning</li>
+								<li>Reward design</li>
+								<li>Agent evaluation</li>
+							</ul>
+							<div class="research-links">
+								<a href="projects/spurious-tool-use/index.html" aria-label="Explore the Spurious Tool Use project">Project <span aria-hidden="true">&rarr;</span></a>
+								<a href="https://arxiv.org/abs/2609.16268" aria-label="Read the Reliable Tool Use paper">Paper <span aria-hidden="true">&rarr;</span></a>
+							</div>
+						</section>
+						<section class="research-card" aria-labelledby="spuriverse-title">
+							<p class="research-venue">NeurIPS 2025</p>
+							<h3 id="spuriverse-title">SpuriVerse: Robustness in Vision-Language Models</h3>
+							<p class="research-summary">I built a benchmark testing whether vision-language models generalize beyond misleading visual cues.</p>
+							<div class="research-result">
+								<p class="research-metric">35.2% <span aria-label="to">&rarr;</span> 78.4%</p>
+								<p class="research-result-label">Accuracy on held-out spurious patterns</p>
+								<p class="research-context">After fine-tuning Qwen2.5-VL-7B on diverse synthetic examples.</p>
+							</div>
+							<ul class="research-tags" aria-label="Research methods">
+								<li>Multimodal learning</li>
+								<li>Benchmarking</li>
+								<li>Fine-tuning</li>
+							</ul>
+							<div class="research-links">
+								<a href="projects/spuriverse/index.html" aria-label="Explore the SpuriVerse project">Project <span aria-hidden="true">&rarr;</span></a>
+								<a href="https://arxiv.org/abs/2506.18322" aria-label="Read the SpuriVerse paper">Paper <span aria-hidden="true">&rarr;</span></a>
+							</div>
+						</section>
 					</div>
 				</div>
 			</article>
@@ -124,66 +114,50 @@
 						<div class="col-12">
 							<ul style="text-align: left; line-height: 1.8;">
 								<li>
+									<b>Spurious Tool Use: When RL Agents Learn the Wrong Reason to Act</b><br />
+									<b>Yiwei Yang*</b>, H. Zhang*, B. Wen, Y. Lu, Y. Wu, L. Zhang, J. McAuley, P. Lu, B. Howe<br />
+									<i>arXiv preprint, 2026</i> &mdash; <a href="https://arxiv.org/abs/2609.16268">arXiv:2609.16268</a>
+								</li>
+								<li>
 									<b>Escaping the SpuriVerse: Can Large Vision-Language Models Generalize Beyond Seen Spurious Correlations?</b><br />
 									<b>Yiwei Yang*</b>, C. P. Lee*, S. Feng, D. Zhao, B. Wen, A. Z. Liu, Y. Tsvetkov, B. Howe<br />
-									<i>ICML 2025 R2-FM, NeurIPS 2025</i>
+									<i>ICML 2025 R2-FM, NeurIPS 2025</i> &mdash; <a href="https://arxiv.org/abs/2506.18322">arXiv:2506.18322</a>
 								</li>
 								<li>
 									<b>Label-Efficient Group Robustness via Out-of-Distribution Concept Curation</b><br />
 									<b>Yiwei Yang</b>, A. Liu, R. Wolfe, A. Caliskan, B. Howe<br />
-									<i>CVPR 2024</i>
+									<i>CVPR 2024</i> &mdash; <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Label-Efficient_Group_Robustness_via_Out-of-Distribution_Concept_Curation_CVPR_2024_paper.html">Paper</a>
 								</li>
 								<li>
 									<b>Towards Zero-shot Annotation of the Built Environment with Vision-Language Models</b><br />
 									B. Han, <b>Yiwei Yang</b>, A. Caspi, B. Howe<br />
-									<i>SIGSPATIAL 2024</i>
+									<i>SIGSPATIAL 2024</i> &mdash; <a href="https://arxiv.org/abs/2408.00932">arXiv:2408.00932</a>
 								</li>
 								<li>
 									<b>Laboratory-scale AI: Open-Weight Models are Competitive with ChatGPT Even in Low-Resource Settings</b><br />
-									R. Wolfe, S. Issac, B. Han, B. Wen, <b>Yiwei Yang</b>, et al.<br />
-									<i>FAccT 2024</i>
+									R. Wolfe, I. Slaughter, B. Han, B. Wen, <b>Yiwei Yang</b>, et al.<br />
+									<i>FAccT 2024</i> &mdash; <a href="https://arxiv.org/abs/2405.16820">arXiv:2405.16820</a>
 								</li>
 								<li>
 									<b>Regularizing Model Gradients with Concepts to Improve Robustness to Spurious Correlations</b><br />
 									<b>Yiwei Yang</b>, A. Liu, R. Wolfe, A. Caliskan, B. Howe<br />
-									<i>ICML SCIS 2023</i>
+									<i>ICML SCIS 2023</i> &mdash; <a href="https://sites.google.com/view/scis-workshop-23/accepted-papers">Workshop listing</a>
 								</li>
 							</ul>
 
 							<p style="margin-top: 1.5em;">
 								<a href="projects/spuriverse/index.html">SpuriVerse project page</a> &nbsp;|&nbsp;
-								<a href="projects/concept-correction/index.html">Concept Correction project page</a> &nbsp;|&nbsp;
-								<a href="papers/yiwei_resume.pdf">Full CV</a>
+								<a href="projects/concept-correction/index.html">Concept Correction project page</a>
 							</p>
 						</div>
 					</div>
 				</div>
 			</article>
 
-		<!-- Contact -->
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>Get in Touch</h2>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<p>
-								Email: <a href="mailto:yanyiwei@uw.edu">yanyiwei@uw.edu</a><br />
-								<a href="papers/yiwei_resume.pdf">CV</a> &nbsp;|&nbsp;
-								<a href="https://scholar.google.com/citations?hl=en&user=-ZAORukAAAAJ">Google Scholar</a> &nbsp;|&nbsp;
-								<a href="https://www.linkedin.com/in/yiwei-yang-1b8bb8125">LinkedIn</a>
-							</p>
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Yiwei Yang. All rights reserved.</li>
-							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</div>
-			</article>
+		<!-- Footer -->
+			<footer class="site-footer">
+				<p>&copy; Yiwei Yang. All rights reserved. <span>Design: <a href="https://html5up.net">HTML5 UP</a></span></p>
+			</footer>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

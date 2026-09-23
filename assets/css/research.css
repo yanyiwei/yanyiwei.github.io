@@ -1,0 +1,118 @@
+/* Research highlights */
+#projects .research-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.5em;
+}
+
+#projects .research-card {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 2em;
+	background: #fff;
+	border: 1px solid #dde3ec;
+	border-radius: 12px;
+	box-shadow: 0 4px 18px rgba(35, 57, 88, 0.05);
+	text-align: left;
+}
+
+#projects .research-venue {
+	margin-bottom: 0.75em;
+	color: #4a6fa5;
+	font-size: 0.8em;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+#projects .research-card h3 {
+	margin-bottom: 0.7em;
+	font-size: 1.35em;
+	line-height: 1.4;
+}
+
+#projects .research-summary {
+	margin-bottom: 1.4em;
+	line-height: 1.7;
+}
+
+#projects .research-result {
+	margin-top: auto;
+	padding: 1.1em 1.2em;
+	background: #f4f7ff;
+	border-left: 3px solid #4a6fa5;
+	border-radius: 6px;
+}
+
+#projects .research-metric {
+	margin: 0 0 0.2em;
+	color: #294d80;
+	font-size: clamp(1.45em, 2.5vw, 2em);
+	font-weight: 700;
+	line-height: 1.3;
+	font-variant-numeric: tabular-nums;
+}
+
+#projects .research-result-label {
+	margin: 0 0 0.5em;
+	font-size: 0.9em;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+#projects .research-context {
+	margin: 0;
+	color: #515c6d;
+	font-size: 0.85em;
+	line-height: 1.6;
+}
+
+#projects .research-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4em 0.6em;
+	margin: 1.4em 0;
+	padding: 0;
+	list-style: none;
+}
+
+#projects .research-tags li {
+	padding: 0.2em 0.65em;
+	background: #f3f4f6;
+	border-radius: 4px;
+	color: #515c6d;
+	font-size: 0.75em;
+	line-height: 1.6;
+}
+
+#projects .research-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5em;
+	padding-top: 1em;
+	border-top: 1px solid #e7ebf0;
+}
+
+#projects .research-links a {
+	color: #365c91;
+	font-weight: 600;
+	text-underline-offset: 0.2em;
+}
+
+#projects .research-links a:focus-visible {
+	outline: 2px solid #365c91;
+	outline-offset: 4px;
+}
+
+@media screen and (max-width: 980px) {
+	#projects .research-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	#projects .research-card {
+		padding: 1.4em;
+	}
+}

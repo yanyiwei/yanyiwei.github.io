@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Spurious Tool Use studies why reinforcement-learning agents learn shortcut tool-selection policies and how tool-necessity rewards improve their robustness." />
+  <title>Spurious Tool Use | Yiwei Yang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+  <a class="back-link" href="../../index.html#projects">&larr; Research highlights</a>
+  <p class="venue-badge">arXiv &middot; September 2026</p>
+  <h1>Spurious Tool Use: When RL Agents Learn the Wrong Reason to Act</h1>
+  <p class="authors"><strong>Yiwei Yang*</strong>, Haoxiang Zhang*, Bingbing Wen, Yao Lu, Yuchen Wu, Lei Zhang, Julian McAuley, Pan Lu, Bill Howe</p>
+  <nav class="button-row" aria-label="Paper resources">
+    <a class="button arxiv" href="https://arxiv.org/abs/2609.16268">Read paper</a>
+    <a class="button" href="https://arxiv.org/pdf/2609.16268">PDF</a>
+  </nav>
+</header>
+<main id="main">
+  <section aria-labelledby="overview-title">
+    <h2 id="overview-title">The right answer can hide the wrong action</h2>
+    <p class="tldr">An agent can answer correctly while calling tools it never needed. We study how reinforcement learning turns irrelevant prompt cues into tool-use shortcuts, and introduce a reward that discourages unnecessary calls.</p>
+    <div class="stat-row">
+      <div class="stat"><span class="number">40.1% &rarr; 0.2%</span><span class="label">Unnecessary search calls after adding the tool-necessity reward</span></div>
+      <div class="stat"><span class="number">83.0% &rarr; 92.8%</span><span class="label">Answer accuracy in the same evaluation</span></div>
+    </div>
+    <p class="note">GSM8K with the WEB_INDEX cue present. Results compare cue-trained agents before and after the reward intervention; see Table 1 of the paper.</p>
+  </section>
+
+  <section aria-labelledby="method-title">
+    <h2 id="method-title">How we isolate the shortcut</h2>
+    <ol class="method-steps">
+      <li><h3>Train with a correlation</h3><p>Pair factual questions with search-associated cues during GRPO training, alongside math questions that use a Python interpreter.</p></li>
+      <li><h3>Change the cue, keep the question</h3><p>Evaluate matched questions with and without the irrelevant cue. Extra search calls on math problems reveal shortcut behavior.</p></li>
+      <li><h3>Reward necessary tool use</h3><p>An LLM judge assesses each tool call. A penalty for unnecessary calls supplements the final-answer reward.</p></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="results-title">
+    <h2 id="results-title">The cue changes the action</h2>
+    <div class="table-wrap" role="region" aria-label="GSM8K results" tabindex="0">
+      <table>
+        <caption>GSM8K evaluation &middot; WEB_INDEX training condition</caption>
+        <thead><tr><th scope="col">Training</th><th scope="col">Test cue</th><th scope="col">Search calls</th><th scope="col">Accuracy</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Cue-trained</th><td>Absent</td><td>0.9%</td><td>84.4%</td></tr>
+          <tr><th scope="row">Cue-trained</th><td>Present</td><td>40.1%</td><td>83.0%</td></tr>
+          <tr class="improved"><th scope="row">+ Tool-necessity reward</th><td>Absent</td><td>0.2%</td><td>88.8%</td></tr>
+          <tr class="improved"><th scope="row">+ Tool-necessity reward</th><td>Present</td><td>0.2%</td><td>92.8%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Search is unnecessary for these math questions. Values are percentages from <a href="https://arxiv.org/html/2609.16268v1#S5.T1">Table 1</a>; they describe this controlled setting, not all agent tasks.</p>
+  </section>
+
+  <section aria-labelledby="findings-title">
+    <h2 id="findings-title">What this tells us</h2>
+    <ul class="findings">
+      <li><strong>Answer accuracy is not enough.</strong> Evaluating the actions an agent takes exposes failures that its final answer can hide.</li>
+      <li><strong>Shortcuts depend on what the agent learns.</strong> In these experiments, tool competence and the cue's semantic association with the tool help explain when shortcuts emerge.</li>
+      <li><strong>Tool decisions need feedback.</strong> Explicit necessity rewards reduce cue-driven search while preserving task performance.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="citation-title">
+    <h2 id="citation-title">Citation</h2>
+    <pre class="bibtex" tabindex="0" aria-label="BibTeX citation"><code>@article{yang2026spurioustooluse,
+  title = {Spurious Tool Use: When RL Agents Learn the Wrong Reason to Act},
+  author = {Yang, Yiwei and Zhang, Haoxiang and Wen, Bingbing and
+            Lu, Yao and Wu, Yuchen and Zhang, Lei and
+            McAuley, Julian and Lu, Pan and Howe, Bill},
+  journal = {arXiv preprint arXiv:2609.16268},
+  year = {2026},
+  url = {https://arxiv.org/abs/2609.16268}
+}</code></pre>
+  </section>
+</main>
+<footer>&copy; 2026 Yiwei Yang &middot; <a href="../../index.html">Home</a> &middot; <a href="../index.html">All projects</a></footer>
+</body>
+</html>

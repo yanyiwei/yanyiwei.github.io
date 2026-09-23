@@ -1,0 +1,135 @@
+/* Introduction and availability */
+#home {
+	padding: 4em 0;
+	font-size: 1rem;
+	text-align: left;
+}
+
+#home .home-layout {
+	display: grid;
+	grid-template-columns: minmax(160px, 240px) minmax(0, 1fr);
+	grid-template-areas: "portrait intro" "bio bio";
+	gap: 2em 3em;
+	align-items: center;
+}
+
+#home .home-intro {
+	grid-area: intro;
+	min-width: 0;
+	margin: 0;
+}
+
+#home h1 {
+	margin-bottom: 0.4em;
+	font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+	line-height: 1.2;
+}
+
+#home .home-credentials,
+#home .home-focus {
+	margin: 0;
+	font-size: 1em;
+	line-height: 1.6;
+}
+
+#home .home-availability {
+	margin: 1.15em 0 0.65em;
+	padding: 0.9em 1em;
+	background: #f4f7ff;
+	border-left: 4px solid #4a6fa5;
+	border-radius: 6px;
+	line-height: 1.6;
+}
+
+#home .home-availability p {
+	margin: 0;
+}
+
+#home .home-availability p + p {
+	margin-top: 0.45em;
+}
+
+#home .home-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25em 1.3em;
+}
+
+#home .home-links a {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	color: #365c91;
+	font-weight: 600;
+	text-underline-offset: 0.2em;
+}
+
+#home .home-links a:focus-visible {
+	outline: 2px solid #365c91;
+	outline-offset: 4px;
+}
+
+#home .home-portrait {
+	grid-area: portrait;
+}
+
+#home .home-portrait img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 18px;
+}
+
+#home .home-bio {
+	grid-area: bio;
+	min-width: 0;
+	line-height: 1.75;
+}
+
+#home .home-bio p {
+	margin: 0 0 1em;
+}
+
+#home .home-bio p:last-child {
+	margin-bottom: 0;
+}
+
+.site-footer {
+	margin: 0;
+	padding: 1.5rem 1rem;
+	border-top: 1px solid #e7ebf0;
+	background: #f6f7f9;
+	color: #59616d;
+	text-align: center;
+}
+
+.site-footer > p {
+	margin: 0;
+	font-size: 0.875rem;
+	line-height: 1.7;
+}
+
+.site-footer span {
+	display: inline-block;
+	margin-left: 1em;
+}
+
+.site-footer a {
+	color: #365c91;
+}
+
+@media screen and (max-width: 736px) {
+	#home {
+		padding: 2em 0;
+	}
+
+	#home .home-layout {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-areas: "intro" "portrait" "bio";
+		gap: 1.25em;
+	}
+
+	#home .home-portrait {
+		width: 140px;
+	}
+}

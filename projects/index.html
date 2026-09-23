@@ -132,14 +132,26 @@
   <header>
     <h1>Research Projects</h1>
     <p style="max-width: 900px; margin: 1.5rem auto 0; font-size: 1.05rem; line-height: 1.6; opacity: 0.95;">
-      These projects focus on building <strong>reliable</strong> and <strong>trustworthy</strong> machine learning models,
-      particularly in addressing <strong>spurious correlations</strong> in vision-language models and improving
-      <strong>model robustness</strong>. These projects explore how to make AI systems more generalizable and robust
-      to distribution shifts.
+      My projects study reliable tool use in LLM agents and robustness in vision-language models,
+      with a focus on detecting, evaluating, and mitigating spurious correlations.
     </p>
   </header>
 
   <main>
+    <!-- Spurious Tool Use -->
+    <div class="card">
+      <div class="card-content">
+        <h2>Spurious Tool Use: When RL Agents Learn the Wrong Reason to Act</h2>
+        <p>RL-trained agents can learn to call tools in response to irrelevant prompt cues. We use counterfactual evaluations to isolate these shortcuts and introduce a tool-necessity reward to discourage unnecessary calls.</p>
+        <p><strong>Key result:</strong> On GSM8K with the WEB_INDEX cue present, unnecessary search calls fall from 40.1% to 0.2% after the reward intervention, while answer accuracy improves.</p>
+        <div class="button-group">
+          <a href="spurious-tool-use/index.html" class="button">Project Page</a>
+          <a href="https://arxiv.org/abs/2609.16268" class="button secondary">Read Paper</a>
+          <span class="badge">arXiv 2026</span>
+        </div>
+      </div>
+    </div>
+
     <!-- Project 1 -->
     <div class="card">
       <div class="card-content">

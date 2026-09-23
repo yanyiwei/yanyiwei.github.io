@@ -217,7 +217,7 @@
       Large vision-language models (LVLMs) like GPT-4V, Gemini 1.5, Claude, and Qwen 2.5-VL demonstrate impressive performance across various tasks, but can they truly generalize beyond spurious correlations learned during training?
     </p>
     <p>
-      We introduce <strong>SpuriVerse</strong>, a novel benchmark comprised of 124 distinct types of spurious correlations extracted from real-world datasets, each containing 1 realistic and 10 synthetic VQA samples&mdash;1,364 multiple-choice questions in total&mdash;sourced from GPT-4o errors on visual question-answering tasks. When tested on 15 open and closed-source models, top performers achieved only <strong>37.1%</strong> accuracy. However, fine-tuning on synthetic examples improved results to <strong>78.40%</strong>, indicating that models <em>can</em> learn to avoid shortcuts and attend to broader image context when given the right training signal.
+      We introduce <strong>SpuriVerse</strong>, a novel benchmark comprised of 124 distinct types of spurious correlations extracted from real-world datasets, each containing 1 realistic and 10 synthetic VQA samples&mdash;1,364 multiple-choice questions in total&mdash;sourced from GPT-4o errors on visual question-answering tasks. When tested on 15 open and closed-source models, top performers achieved only <strong>37.1%</strong> accuracy. In a separate fine-tuning experiment, Qwen2.5-VL-7B improved from <strong>35.2% to 78.4%</strong> accuracy on held-out anchors after training on synthetic examples from other spurious correlation types. This demonstrates generalization to unseen patterns, with a trade-off in performance on non-spurious examples.
     </p>
   </section>
 
@@ -248,7 +248,7 @@
     <ul class="contributions">
       <li><strong>SpuriVerse benchmark:</strong> 124 spurious correlation types extracted from real-world datasets, each with realistic and synthetic VQA samples covering a broad range of visual shortcuts.</li>
       <li><strong>Systematic evaluation of 15 LVLMs:</strong> Comprehensive assessment of open and closed-source models, revealing that even state-of-the-art systems fall far short on spurious pattern generalization.</li>
-      <li><strong>Fine-tuning intervention:</strong> Demonstrated that synthetic fine-tuning on diverse spurious patterns improves generalization from 37.1% to 78.40%, pointing toward a tractable solution.</li>
+      <li><strong>Fine-tuning intervention:</strong> Fine-tuning Qwen2.5-VL-7B on diverse synthetic examples improves accuracy on held-out anchors from 35.2% to 78.4%, demonstrating generalization to unseen spurious correlation types.</li>
       <li><strong>Failure mode analysis:</strong> Identified when and how models rely on dataset artifacts rather than genuine visual reasoning, providing actionable insights for building more robust VLMs.</li>
     </ul>
   </section>
