@@ -132,8 +132,10 @@
   <header>
     <h1>Research Projects</h1>
     <p style="max-width: 900px; margin: 1.5rem auto 0; font-size: 1.05rem; line-height: 1.6; opacity: 0.95;">
-      My projects study coding agents on underspecified tasks, reliable tool use in LLM agents, and robustness in vision-language models,
-      with a focus on detecting, evaluating, and mitigating spurious correlations.
+      I study how frontier models fail in practice: I identify failure modes in real user-agent trajectories,
+      turn them into benchmarks and RL environments, and fix them with post-training. My current focus is whether
+      coding agents recognize ambiguous tasks and ask only the clarification questions worth asking. Prior work
+      covers spurious tool use in RL-trained agents and the robustness of vision-language models.
     </p>
   </header>
 
@@ -142,8 +144,8 @@
     <div class="card">
       <div class="card-content">
         <h2>Benchmarking Coding Agents on Underspecified Tasks</h2>
-        <p>Coding agents often proceed on underspecified requests instead of asking for clarification. We mined 4,677 real coding-agent sessions, found 1,067 such cases, and built 171 tasks with reproducible repository states, each with a sandbox, an executable verifier, and a simulated user who returns the original user's correction only when the agent asks about the missing specification. Each question is scored by its cost of not asking: tokens spent on tool calls and edits along the wrong path, plus undoing it.</p>
-        <p><strong>Key result:</strong> Fable 5.1 asked in only 18% of runs, and its decisions to ask were weakly calibrated to question value: 60% of its questions were low-value (vs. an 80% base rate), and the final-state pass rate was 23%.</p>
+        <p>Coding agents often proceed on underspecified requests instead of asking for clarification. From 4,677 real coding-agent sessions, we built 171 sandboxed tasks with executable verifiers and a simulated user who reveals the missing specification only when asked, and we score each question by its cost of not asking.</p>
+        <p><strong>Key result:</strong> Fable 5.1 asked in only 18% of runs, and 60% of its questions were low-value (vs. an 80% base rate).</p>
         <div class="button-group">
           <a href="underspecified-coding-tasks/index.html" class="button">Project Page</a>
           <span class="badge">Ongoing &middot; Paper in preparation</span>
@@ -165,26 +167,12 @@
       </div>
     </div>
 
-    <!-- Project 1 -->
+    <!-- SpuriVerse -->
     <div class="card">
       <div class="card-content">
         <h2>Escaping the SpuriVerse: Can Large Vision-Language Models Generalize Beyond Seen Spurious Correlations?</h2>
-        <p>
-          Large vision-language models (LVLMs) like GPT-4V, Gemini 1.5, Claude, and Qwen 2.5-VL demonstrate impressive performance
-          across various tasks, but can they truly generalize beyond spurious correlations learned during training? This research
-          systematically investigates whether state-of-the-art vision-language models can overcome spurious associations when confronted
-          with scenarios where previously learned patterns break down or are inverted.
-        </p>
-        <p>
-          We create a comprehensive evaluation framework to assess model robustness when spurious correlations are disrupted. Our findings
-          reveal critical limitations: even advanced models struggle to learn robust features independent of spurious correlations,
-          highlighting fundamental challenges in developing truly reliable AI systems that can generalize to distribution shifts.
-        </p>
-        <p>
-          <strong>Key Contributions:</strong> (1) Documented how vision-language models develop and rely on spurious correlations,
-          (2) Created systematic benchmarks for evaluating robustness to spurious pattern disruptions, (3) Evaluated multiple
-          state-of-the-art LVLMs to determine their vulnerability to distribution shifts involving spurious correlations.
-        </p>
+        <p>Vision-language models can latch onto misleading visual cues. We curated 1,364 multiple-choice VQA questions across 124 spurious correlation types, drawn from real model errors and synthetic counterfactuals, to test whether models generalize beyond correlations they have seen.</p>
+        <p><strong>Key result:</strong> Fine-tuning Qwen2.5-VL-7B on diverse synthetic examples raised accuracy on held-out spurious patterns from 35.2% to 78.4%.</p>
         <div class="button-group">
           <a href="spuriverse/index.html" class="button">Project Page</a>
           <a href="https://arxiv.org/pdf/2506.18322" class="button secondary" target="_blank">Read Paper</a>
@@ -193,26 +181,12 @@
       </div>
     </div>
 
-    <!-- Project 2 -->
+    <!-- Concept Correction -->
     <div class="card">
       <div class="card-content">
         <h2>Label-Efficient Group Robustness via Out-of-Distribution Concept Curation</h2>
-        <p>
-          Building machine learning models that maintain consistent performance across different demographic groups typically requires
-          extensive labeled datasets—a costly and time-consuming process. This research introduces a novel approach that achieves
-          group robustness while dramatically reducing annotation requirements through strategic use of out-of-distribution concepts.
-        </p>
-        <p>
-          Rather than relying on exhaustive labeling, we demonstrate how carefully curated concepts that fall outside the training
-          distribution can improve model fairness across demographic groups. By incorporating these strategically selected concepts
-          during training, models learn more robust feature representations that generalize better across diverse populations.
-        </p>
-        <p>
-          <strong>Key Contributions:</strong> (1) A novel methodology for achieving group robustness through out-of-distribution
-          concept curation, (2) Demonstrated label efficiency that significantly reduces annotation requirements while maintaining
-          or exceeding fully supervised performance, (3) A practical framework for practitioners developing equitable AI systems
-          with constrained labeling budgets.
-        </p>
+        <p>Fixing spurious correlations usually requires costly per-example group labels. Concept DRO instead curates out-of-distribution concept images, including AI-generated ones, to estimate group labels and train distributionally robust models.</p>
+        <p><strong>Key result:</strong> Up to 33.1% improvement over baselines without any explicit spurious attribute annotations.</p>
         <div class="button-group">
           <a href="concept-correction/index.html" class="button">Project Page</a>
           <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Label-Efficient_Group_Robustness_via_Out-of-Distribution_Concept_Curation_CVPR_2024_paper.pdf" class="button secondary" target="_blank">Read Paper</a>
@@ -224,7 +198,7 @@
   </main>
 
   <footer>
-    © 2025 Yiwei Yang — <a href="https://yanyiwei.github.io" target="_blank">Home</a>
+    © 2026 Yiwei Yang — <a href="https://yanyiwei.github.io" target="_blank">Home</a>
   </footer>
 </body>
 </html>
