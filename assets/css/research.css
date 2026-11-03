@@ -17,6 +17,10 @@
 	text-align: left;
 }
 
+#projects .research-card--featured {
+	grid-column: 1 / -1;
+}
+
 #projects .research-venue {
 	margin-bottom: 0.75em;
 	color: #4a6fa5;
@@ -98,6 +102,11 @@
 	color: #365c91;
 	font-weight: 600;
 	text-underline-offset: 0.2em;
+}
+
+#projects .research-links .research-pending {
+	color: #6b7280;
+	font-style: italic;
 }
 
 #projects .research-links a:focus-visible {

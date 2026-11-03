@@ -47,7 +47,7 @@
 					</div>
 					<div class="home-bio">
 						<p>I earned my PhD in Information Science from the <b>University of Washington</b> in August 2026, advised by <b>Bill Howe</b>, and my B.S. in Computer Science and Engineering from the <b>University of Michigan</b>.</p>
-						<p>My research focuses on <b>LLM agents</b>, particularly <b>coding, tool use, reasoning, and post-training</b>. I build benchmarks and training methods to help agents use tools for the right reasons and generalize beyond spurious correlations. My work spans coding-agent evaluation, reinforcement learning and reward design, and robustness in vision-language models.</p>
+						<p>My research focuses on <b>LLM agents</b>, particularly <b>coding, tool use, reasoning, and post-training</b>. I build benchmarks and training methods to help agents use tools for the right reasons and generalize beyond spurious correlations. My work spans coding-agent evaluation, reinforcement learning and reward design, and robustness in vision-language models. My current work asks whether coding agents recognize underspecified tasks and ask the clarification questions worth asking.</p>
 						<p>I have also interned at <b>LinkedIn Core AI</b>, <b>Adobe</b>, and <b>Sony AI</b>. At LinkedIn, I developed cost-aware model routing and an automatic tool compiler to improve the accuracy and efficiency of recommendation agents.</p>
 					</div>
 				</div>
@@ -61,6 +61,25 @@
 						<p>Building more reliable agents and multimodal models.</p>
 					</header>
 					<div class="research-grid">
+						<section class="research-card research-card--featured" aria-labelledby="underspec-title">
+							<p class="research-venue">Ongoing project &middot; 2026</p>
+							<h3 id="underspec-title">Benchmarking Coding Agents on Underspecified Tasks</h3>
+							<p class="research-summary">I study whether coding agents recognize ambiguous requests and ask only the clarification questions worth asking. From 4,677 real coding-agent sessions, I built 171 sandboxed tasks with executable verifiers and a simulated user who reveals the missing specification only when asked, and I score each question by the cost of not asking.</p>
+							<div class="research-result">
+								<p class="research-metric">18%</p>
+								<p class="research-result-label">Runs where Fable 5.1 asked for clarification</p>
+								<p class="research-context">Its decisions to ask were weakly calibrated: 60% of its questions were low-value (vs. an 80% base rate), and the final-state pass rate was 23%.</p>
+							</div>
+							<ul class="research-tags" aria-label="Research methods">
+								<li>Coding agents</li>
+								<li>Benchmark construction</li>
+								<li>Agent evaluation</li>
+							</ul>
+							<div class="research-links">
+								<a href="projects/underspecified-coding-tasks/index.html" aria-label="Explore the Underspecified Coding Tasks project">Project <span aria-hidden="true">&rarr;</span></a>
+								<span class="research-pending">Paper in preparation</span>
+							</div>
+						</section>
 						<section class="research-card" aria-labelledby="tool-use-title">
 							<p class="research-venue">arXiv 2026</p>
 							<h3 id="tool-use-title">Reliable Tool Use in LLM Agents</h3>

@@ -132,12 +132,25 @@
   <header>
     <h1>Research Projects</h1>
     <p style="max-width: 900px; margin: 1.5rem auto 0; font-size: 1.05rem; line-height: 1.6; opacity: 0.95;">
-      My projects study reliable tool use in LLM agents and robustness in vision-language models,
+      My projects study coding agents on underspecified tasks, reliable tool use in LLM agents, and robustness in vision-language models,
       with a focus on detecting, evaluating, and mitigating spurious correlations.
     </p>
   </header>
 
   <main>
+    <!-- Underspecified Coding Tasks -->
+    <div class="card">
+      <div class="card-content">
+        <h2>Benchmarking Coding Agents on Underspecified Tasks</h2>
+        <p>Coding agents often proceed on underspecified requests instead of asking for clarification. We mined 4,677 real coding-agent sessions, found 1,067 such cases, and built 171 tasks with reproducible repository states, each with a sandbox, an executable verifier, and a simulated user who returns the original user's correction only when the agent asks about the missing specification. Each question is scored by its cost of not asking: tokens spent on tool calls and edits along the wrong path, plus undoing it.</p>
+        <p><strong>Key result:</strong> Fable 5.1 asked in only 18% of runs, and its decisions to ask were weakly calibrated to question value: 60% of its questions were low-value (vs. an 80% base rate), and the final-state pass rate was 23%.</p>
+        <div class="button-group">
+          <a href="underspecified-coding-tasks/index.html" class="button">Project Page</a>
+          <span class="badge">Ongoing &middot; Paper in preparation</span>
+        </div>
+      </div>
+    </div>
+
     <!-- Spurious Tool Use -->
     <div class="card">
       <div class="card-content">

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An ongoing project benchmarking whether coding agents recognize underspecified tasks and ask the clarification questions worth asking, built from real coding-agent sessions." />
+  <title>Coding Agents on Underspecified Tasks | Yiwei Yang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+  <a class="back-link" href="../../index.html#projects">&larr; Research highlights</a>
+  <p class="venue-badge ongoing">Ongoing project &middot; 2026</p>
+  <h1>Benchmarking Coding Agents on Underspecified Tasks</h1>
+  <p class="authors"><strong>Yiwei Yang</strong> &middot; University of Washington</p>
+</header>
+<main id="main">
+  <section aria-labelledby="overview-title">
+    <h2 id="overview-title">Knowing when to ask</h2>
+    <p class="tldr">Real requests to coding agents are often missing a key detail. A good agent should notice and ask, but only when the question is worth the user's time. This project builds a benchmark from real agent sessions to measure whether coding agents ask the right clarification questions, and how much it costs when they don't.</p>
+    <div class="stat-row three">
+      <div class="stat"><span class="number">18%</span><span class="label">Runs where Fable 5.1 asked for clarification</span></div>
+      <div class="stat"><span class="number">60%</span><span class="label">Of its questions were low-value, vs. an 80% base rate</span></div>
+      <div class="stat"><span class="number">23%</span><span class="label">Final-state pass rate</span></div>
+    </div>
+    <p class="note">Preliminary results on the current 171-task benchmark. Numbers may change as the work continues.</p>
+  </section>
+
+  <section aria-labelledby="data-title">
+    <h2 id="data-title">From real sessions to tasks</h2>
+    <div class="stat-row three">
+      <div class="stat"><span class="number">4,677</span><span class="label">Real coding-agent sessions mined</span></div>
+      <div class="stat"><span class="number">1,067</span><span class="label">Cases where the agent proceeded on an underspecified request instead of asking</span></div>
+      <div class="stat"><span class="number">171</span><span class="label">Tasks with reproducible repository states</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="method-title">
+    <h2 id="method-title">How the benchmark works</h2>
+    <ol class="method-steps">
+      <li><h3>Find missed questions</h3><p>Identify sessions where the agent went ahead on an underspecified request and the user later had to correct it.</p></li>
+      <li><h3>Rebuild the task</h3><p>Restore the repository state for each case and pair it with a sandbox and an executable verifier.</p></li>
+      <li><h3>Simulate the user</h3><p>A simulated user returns the original user's correction only when the agent asks about the missing specification.</p></li>
+      <li><h3>Price each question</h3><p>Score each question by its cost of not asking: tokens spent on tool calls and line edits along the wrong implementation path, plus the cost of undoing it.</p></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="findings-title">
+    <h2 id="findings-title">Early observations</h2>
+    <ul class="findings">
+      <li><strong>Agents rarely ask.</strong> Fable 5.1 asked for clarification in only 18% of runs, even though every task is missing information the user cares about.</li>
+      <li><strong>When they ask, they don't ask well.</strong> Its decisions to ask were only weakly calibrated to question value: 60% of its questions were low-value, against an 80% base rate.</li>
+      <li><strong>Not asking is costly.</strong> The final-state pass rate was 23%, and wrong guesses lead to wasted tool calls and edits that have to be undone.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="status-title">
+    <h2 id="status-title">Status</h2>
+    <p class="status">This project is ongoing, and a paper is in preparation. If you are interested in the benchmark or would like to collaborate, please <a href="mailto:yanyiwei@uw.edu">get in touch</a>.</p>
+  </section>
+</main>
+<footer>&copy; 2026 Yiwei Yang &middot; <a href="../../index.html">Home</a> &middot; <a href="../index.html">All projects</a></footer>
+</body>
+</html>
